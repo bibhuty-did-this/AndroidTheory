@@ -1,0 +1,87 @@
+- Android is a linux based operating system
+
+- Features of Android:
+	1. Beautiful UI
+	2. Connectivity
+	3. Storage
+	4. Media Support 
+	5. Messaging
+	6. Web Browser
+	7. Multi-touch
+	8. Multi-tasking
+	9. Resizable Widget
+	10. Multi-language
+	11. GCF
+	12. WiFi Direct
+	13. Android Beam
+	
+- Andriod Architecture:
+	1. Linux Kernel:
+		- The bottom layer
+		- Provides basic functionalities like Process, Memory and Device Management etc..
+	2. Libraries:
+		- On the top of linux kernel
+		- WebKit, SQLite, SSL, libraries to play video and audio etc.
+	3. Android Runtime:
+		- Also on top of linux kernel
+		- Key component is Dalvic Virtual Machine(similar to the JVM)
+	4. Application Framework:
+		- On the top of Libraries and Android Runtime
+		- Provides servies in terms of classes which is used by developers
+	5. Applications:
+		- On the top of Application Framework
+		- Games, Contact Book, Browser etc.
+		
+- Application Components:
+	- Essential building block of Android Devices which are losely coupled in `AndroidManifest.xml`
+	- Four main components are:
+		1. Activities(a single screen with UI)
+		2. Services(runs in the background to form long-running operations like playing music in background)
+		3. Broadcast Rececivers(respond broadcast message from other applications or from the system like
+							    the download is completed)
+		4. Content Providers(supplies data from one application to other on request)
+	- Additional components are:
+		1. Fragements(behaviour of a portion of UI in an activity)
+		2. Views(UI elements on screen such as Buttons, List Forms etc)
+		3. Layouts(view hierarachies that control screen format 	& appearence of the views)
+		4. Intents(messages wiring components together)
+		5. Resources(external elements, such as strings, constants etc)
+		6. Manifest(configuration file for the application)
+		
+- File folder description:
+	- src(.java source file of the project)
+	- gen(.R file, it references all the resources of the project)
+	- bin(.apk file which is built by ADT)
+	- res/drawable-hdpi(contains the list of drawable objects)
+	- res/layout(contains files that define the UI)
+	- res/values(xml file containing color, strings defn etc)
+	- AndroidManifest.xml(defines fundamental characteristics of the app)
+	
+- MainActivity.java:
+	- It is actual application file which ultimately gets converted to Dalvic executable and runs the application
+	
+- AndroidManifest.xml
+	- Whatever component we develop as a part of the application, we must declare all its components in 
+	  AndroidManifest.xml, which resides at the root of the application project directory.
+	- This file works as an interface between Android OS and the application, so it is mandatory to declare the 
+	  components in this file
+	- The important tags of this file are: <activity>, <service>, <receiver>, <provider> etc.
+
+- String.xml
+	- Contains all the texts the application uses
+
+- The R file:
+	- It is a glue between acitivity java files like MainActivity.java and resource file like string.xml
+	- It is a auto generated file which is not supposed to be changed by the user
+	
+- ActivityMain.xml(the layout file)
+	- Contains the code for the layout of the application
+	
+- Different callback functions are:
+	- onCreate()
+	- onStart()
+	- onResume()
+	- onPause()
+	- onStop()
+	- onDestroy()
+	- onRestart()
